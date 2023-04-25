@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Stopwatch</h1>
+        <h2>Vanilla JavaScript Stopwatch</h2>
+        <p>
+            <span id="minutes">00</span> : <span id="seconds">00</span>
+        </p>
+
+        <button id="button-start">Start</button>
+
+        <button id="button-stop">Stop</button>
+
+        <button id="button-reset">Reset</button>
+
+    </div>
+
+    <script>
+        // Onclick button (gán function cho button)
+        // Tạo biến seconds, minutes lưu số phút
+        // document.getElementById(), gán giá trị cho innerHTML
+        // Stop => clearInterval()
+        // Reset => clearInterval() => gán lại 00 cho phút
+
+        let minutes = 0
+        let seconds = 0
+
+        let tempInterval;
+
+        const minutesHtml = document.getElementById('minutes')
+        const secondsHtml = document.getElementById('seconds')
+
+        const btnStart = document.getElementById('button-start')
+        const btnStop = document.getElementById('button-stop')
+        const btnReset = document.getElementById('button-reset')
+
+
+        btnStart.addEventListener('click', function() {
+            tempInterval = setInterval(runInterval, 100)
+        })
+
+
+        btnStop.addEventListener('click', function() {
+            clearInterval(tempInterval)
+        })
+
+        btnReset.addEventListener('click', () => {
+            clearInterval(tempInterval)
+
+            minutesHtml.innerHTML = '00'
+            secondsHtml.innerHTML = '00'
+
+            minutes = 0
+            seconds = 0
+        })
+
+        function() {
+            
+        }
+
+        function runInterval() {
+            seconds++
+
+            if (seconds < 10) {
+                secondsHtml.innerHTML = '0' + seconds
+            }
+            else if (seconds > 60) {
+                secondsHtml.innerHTML = '00'
+
+                minutes++
+
+                if (minutes < 10) {
+                    minutesHtml.innerHTML = '0' + minutes
+                }
+                else {
+                    minutesHtml.innerHTML = minutes
+                }
+
+                seconds = 0
+            }
+            else {
+                secondsHtml.innerHTML = seconds
+            }
+        }
+
+    </script>
+</body>
+</html>
