@@ -1,0 +1,231 @@
+
+body {
+    width: 1440px;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+
+}
+
+    .box01Container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+            .box01Text {
+                position: absolute;
+                font-size: 40px;
+                color:aliceblue;
+            }
+
+                    .box01Text h1 {
+                        text-align: center;
+                    }
+
+                    .box01Text div {
+                        display: flex;
+                        justify-content: center;
+                    }
+
+            .header {
+                display: flex;
+                justify-content: space-around;
+                color:aliceblue;
+                position: absolute;
+                z-index: 1;
+                top: 19px;
+                width: 1440px;
+
+            }
+
+
+
+
+
+
+
+    .box02Container {
+        height: 1084px;
+        position: relative;
+        display: flex;
+        background-color:rgb(255, 255, 255);
+
+    }
+
+        .box02Text {
+            position: absolute;
+            width: 548px;
+            height: 382px;
+            top: 323px;
+            left: 445px;
+
+   
+        }
+
+        .box02Button {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+
+
+
+        /* image */
+                    .box02Photo02 {
+                    position: absolute;
+                    top: 503px;
+                    left: 0px;
+
+                    }
+
+                    .box02Photo03 {
+                    position: absolute;
+                    top: 211px;
+                    left: 38px;
+                    }
+
+                    .box02Photo04 {
+                    position: absolute;
+                    top: 30px;
+                    left: 537px;
+                    }
+
+                    .box02Photo05 {
+                    position: absolute;
+                    top: 262px;
+                    right: 200px;
+                    }
+
+                    .box02Photo06 {
+                    position: absolute;
+                    top: 451px;
+                    right: 0px;
+
+                    }
+
+                    .box02Photo07 {
+                        position: absolute;
+                        top: 690px;
+                        right: 198px;
+    
+                        }
+
+
+
+
+    .box03Container {
+
+    }
+
+            .box03Text {
+                margin: 0;
+                padding: 24px;
+                background-color: rgb(255, 255, 255);
+            }
+
+
+
+            .box03Inside {
+                background-color: rgb(255, 255, 255);
+                display:flex;
+                justify-content: center;
+                align-content: space-around;
+                padding: 24px 15px;
+                gap: 30px;
+                position: relative;
+                }
+
+
+                    .box03Inside01Text {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    .box03Inside02Text {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    .box03Inside03Text {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    .box03Inside04Text {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+
+
+    .butShopall {
+        background-color: rgb(255, 255, 255);
+        display:flex;
+        justify-content: center;
+        border-style: none;
+        border-color:white;
+        padding: 24px;
+    }
+
+
+
+
+
+
+
+
+    .box04Container {
+        background-color: rgb(23, 25, 122);
+        display: flex;
+        margin-top:22px;
+        
+    }
+
+        .box04Left{
+            display: flex;
+            position: relative;
+            justify-content:center;
+            align-items: center;
+        }
+
+            .box04LeftText {
+                width: 405px;
+                position: absolute;
+                color:white;
+
+            }
+
+
+
+
+
+    .box05Container {
+        height:1081;
+        position: relative;
+        display: flex;
+
+
+
+
+    }
+
+
+        .box05Item01 {
+            width: 291px;
+            height: 365px;
+            top: 125px;
+            left: 106px;
+            position: absolute;
+            background-color: rgb(255, 255, 255);
+
+        }
+
+            .box05Item01Cap {
+                width:291px;
+                display: flex;
+                justify-content: space-between;
+
+            }

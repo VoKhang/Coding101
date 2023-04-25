@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch</title>
+</head>
+<body>
+
+<P style="font-size: 70px;">WATCH CLOCK</P>  
+
+<p>
+    <span id="minutes">00</span> : <span id="seconds">00</span>
+
+</p>
+
+
+
+<button id="Start">START</button>
+<button id="Stop">STOP</button>
+<button id="Reset">RESET</button>
+
+
+
+
+
+<script>
+
+let minutes = 0
+let seconds = 0
+
+let tempInterval
+
+
+const btnStart =  document.getElementById("Start")
+const btnStop =  document.getElementById("Stop")
+const btnReset =  document.getElementById("Reset")
+
+const secondsHtml = document.getElementById("seconds")
+const minutesHtml = document.getElementById("minutes")
+
+
+btnReset.addEventListener("click",clickReset)
+
+function clickReset() {
+    clearInterval(tempInterval)
+    minutes = 0
+    seconds = 0
+    minutesHtml.innerHTML = "00"
+    secondsHtml.innerHTML = "00"
+
+}
+
+
+
+
+
+
+
+btnStart.addEventListener("click",clickStart)
+
+function clickStart() {
+    
+    tempInterval = setInterval(function() {
+        seconds++
+
+        if(seconds <10){
+            secondsHtml.innerHTML = "0" + seconds
+
+        }
+        else if (seconds > 60){
+            minutes++
+            seconds=0
+            minutesHtml.innerHTML = minutes
+            if(minutes <10){
+                minutesHtml.innerHTML = "0" + minutes
+            }
+            else {
+                minutesHtml.innerHTML = minutes
+            }
+        }
+        else {
+            secondsHtml.innerHTML = seconds
+        }
+
+
+    },50)
+    
+}
+
+
+btnStop.addEventListener("click",clickStop)
+
+function clickStop() {
+    clearInterval(tempInterval)
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
